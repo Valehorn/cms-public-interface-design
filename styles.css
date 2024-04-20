@@ -20,6 +20,7 @@ body {
     --main-color: #000000;
     --secondary-color: #9f7303;
     --main-background-color: #fffdf8;
+    --secondary-background-color: #f4efe2;
     font-family: var(--font-ptsans);
     font-weight: 400;
     font-size: 18px;
@@ -37,7 +38,7 @@ body {
 }
 
 .container {
-    width: 1110px;
+    width: 1440px;
     padding: 0 20px;
     margin: 0 auto;
 }
@@ -99,4 +100,50 @@ body {
     transform: rotate(45deg);
     top: 12px;
     left: -20px;
+}
+
+.reviews {
+    background-color: var(--secondary-background-color);
+}
+
+.review {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 25px auto;
+    gap: 8px 6px;
+    margin-bottom: 32px;
+    border: 1px solid #f5d581;
+}
+
+.review:last-child {
+    margin-bottom: 0;
+}
+
+.review__avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    text-indent: -100vw;
+}
+
+.review__name {
+    grid-column: 2/-1;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.review__text {
+    grid-column: 2/-1;
+    font-weight: 400;
+    margin: 0;
+}
+
+.image__wrapper {
+    grid-row: 1/-1;
+    width: 50px;
+    height: 50px;
+    background-color: #f5d581;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
 }
