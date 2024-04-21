@@ -14,6 +14,15 @@
     font-display: swap;
 }
 
+html {
+    height: 100%;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
 
 body {
     --font-ptsans: "PT Sans", sans-serif;
@@ -25,22 +34,20 @@ body {
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
-    padding: 60px 0;
-    min-width: 1150px;
-    background-color: var(--main-background-color);
+    margin: 0;
     color: var(--main-color);
-}
-
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
+    background-color: var(--main-background-color);
+    height: 100%;
 }
 
 .container {
     width: 1440px;
     padding: 0 20px;
     margin: 0 auto;
+}
+
+.button {
+    display: inline-block;
 }
 
 .wysiwyg-wrapper h1 {
@@ -75,7 +82,7 @@ body {
     border-bottom: 1px solid #f5d581;
     text-align: center;
     width: 70%;
-    margin: 60px auto 60px auto;
+    margin: 60px auto 114px auto;
 }
 
 .wysiwyg-wrapper ul,
@@ -102,8 +109,72 @@ body {
     left: -20px;
 }
 
-.reviews {
+.order-rewiev-wrapper {
     background-color: var(--secondary-background-color);
+    padding: 81px 0;
+}
+
+.order__title {
+    font-size: 32px;
+    line-height: 39px;
+    margin-top: 20px;
+    color: var(--secondary-color);
+}
+
+.order-form__item {
+    margin-bottom: 24px;
+}
+
+.order-form textarea {
+    resize: none;
+    width: 1110px;
+    height: 160px;
+    border: 1px solid #f5d581;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.order-form textarea::placeholder {
+    opacity: 0.3;
+}
+
+.order-form .wpcf7-text {
+    width: 540px;
+    height: 60px;
+    border: 1px solid #f5d581;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.order-form .wpcf7-text::placeholder {
+    opacity: 0.3;
+}
+
+.order-form__submit-wrapper {
+    margin-bottom: 112px;
+}
+
+.order-form .order-form__submit-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+}
+
+.order-form__submit-description {
+    font-size: 12px;
+    margin: 0;
+}
+
+.order-form .wpcf7-submit {
+    border-radius: 8px;
+    width: 285px;
+    min-height: 64px;
+    border: 1px solid #f5d581;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #9f7303;
+    color: #ffffff;
 }
 
 .review {
