@@ -48,6 +48,7 @@ body {
 
 .button {
     display: inline-block;
+    cursor: pointer;
 }
 
 .wysiwyg-wrapper h1 {
@@ -121,11 +122,11 @@ body {
     color: var(--secondary-color);
 }
 
-.order-form__item {
+.order-form__wrapper p {
     margin-bottom: 24px;
 }
 
-.order-form textarea {
+.wpcf7-textarea {
     resize: none;
     width: 1110px;
     height: 160px;
@@ -134,7 +135,7 @@ body {
     padding: 16px;
 }
 
-.order-form textarea::placeholder {
+.wpcf7-textarea::placeholder {
     opacity: 0.3;
 }
 
@@ -150,19 +151,20 @@ body {
     opacity: 0.3;
 }
 
-.order-form__submit-wrapper {
-    margin-bottom: 112px;
+.order-form p:has(button.wpcf7-submit) {
+    margin: 0;
 }
 
-.order-form .order-form__submit-wrapper {
+.order-form__submit-wrapper {
     display: flex;
+    align-items: center;
     flex-wrap: nowrap;
     gap: 16px;
+    margin-bottom: 112px;
 }
 
 .order-form__submit-description {
     font-size: 12px;
-    margin: 0;
 }
 
 .order-form .wpcf7-submit {
